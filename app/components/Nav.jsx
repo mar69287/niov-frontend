@@ -9,8 +9,8 @@ import { TbCloudStorm, TbBriefcase2Filled } from "react-icons/tb";
 import { LuWalletCards } from "react-icons/lu";
 import { FaBookReader } from "react-icons/fa";
 import { useState } from "react";
+import ImageContainer from "./ImageContainer";
 
-// Navigation Data
 const navData = [
   {
     name: "Products",
@@ -90,30 +90,118 @@ const navData = [
 ];
 
 const Nav = () => {
+  const [selected, setSelected] = useState(0);
   return (
     <header className="flex-center relative px-4 md:px-10 z-10 h-[4rem] md:h-[4.5rem]">
       <nav className='flex-between w-full relative max-w-[90rem]'>
         <Link href='/' className='flex flex-center'>
-          <div className="relative w-[100px] h-[100px] md:w-[130px]">
-            <Image
-              src='/assets/images/logo.png'
-              alt='logo'
-              fill
-              sizes="(min-width: 320px) 100%"
-              className='object-contain'
-            />
-          </div>
+            <ImageContainer className={"relative w-[100px] h-[50px] md:w-[120px]"} img={'/assets/images/logo.png'} />
         </Link>
-        <MobileNav />
+        <MobileNav selected={selected} setSelected={setSelected} />
+        <DesktopNav selected={selected} setSelected={setSelected} />
       </nav>
       <GradientBox className="bg-gradient-to-r h-[1px] w-full absolute bottom-0 left-0" />
     </header>
   );
 };
 
-const MobileNav = () => {
+const DesktopNav = ({ selected, setSelected }) => {
+    return (
+        <>
+            <div className="absolute top-0 bottom-0 mx-auto left-0 right-0 w-max flex-center gap-2 ">
+                {navData.map((tab, index) => (
+                    <DesktopTab
+                        key={index}
+                        setSelected={setSelected}
+                        isSelected={selected === index + 1}
+                        tabNum={index + 1}
+                        name={tab.name}
+                        icon={tab.icon}
+                        submenu={tab.submenu}
+                    />
+                ))}
+            </div>
+            <button className="btn btn-active bg-black rounded-sm text-white font-light hidden md:block h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+        </>
+    )
+}
+
+const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
+    const gradientStyles = 'bg-gradient-to-t absolute top-[4rem] rounded-md p-[2px] hidden md:flex gap-[2px]' 
+    return (
+        <>
+            <div 
+                className="p-2 hidden md:block"
+                onClick={() => {
+                    setSelected(isSelected ? 0 : tabNum);
+                }}
+            
+            >
+                <p className="">{name}</p>
+            </div>
+            {isSelected && (
+                <GradientBox className={gradientStyles}>
+                    <div className="w-[18rem] bg-white rounded-tl-md rounded-bl-md p-4">
+                        <h1 className="text-gray-400">{name}</h1>
+                        {submenu.map((subItem, index) => (
+                            <Link key={index} href={subItem.link} className="block py-2 text-black">
+                                <div className="flex items-center gap-4">
+                                    <div className="h-full flex justify-center items-center text-2xl">{subItem.icon}</div>
+                                    <div>
+                                        <p className="text-[15px]">{subItem.name}</p>
+                                        <p className="text-gray-400 text-[15px] leading-[18px]">{subItem.details}</p>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                        {
+                            isSelected && name == "Products" && (
+                                <button className="btn btn-active w-full rounded-sm text-white font-light bg-[#FF7D9C] border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem] mt-3">Download</button>
+                            )
+                        }
+                    </div>
+                    {
+                        tabNum != 3 && (
+                            <div
+                                className={`w-[18rem] bg-white rounded-tr-md rounded-br-md p-4 relative ${tabNum == 1 ? 'h-[22rem]' : 'h-[23rem]'}`}
+                            >
+                                {
+                                    tabNum == 1 ?  (
+                                        <>
+                                            <h1 className="text-gray-400">Platform</h1>
+                                            <ImageContainer className={"relative h-[50px] w-[140px]"} img={'/assets/images/logo.png'} />
+                                            <div>
+                                                <p className="text-gray-400 text-sm">Next Gen CRM for Web3 Advertising and Marketing</p>
+                                            </div>
+                                            <ImageContainer className={"absolute w-full h-72 bottom-0 left-0"} img={'/assets/images/productsPlatform.svg'} />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <ImageContainer className={"relative w-full h-44"} img={'/assets/images/resourcesArticle.svg'} />
+                                            <div className="mt-3">
+                                                <p className="text-gray-400 text-xs">Recent Blog Article</p>
+                                                <h1 className="font-medium">Need to know about NIOV Labs</h1>
+                                                <p className="text-xs text-gray-800 font-light leading-[18px] mt-1">
+                                                    NOIV Labs offers a next-gen CRM for Web3 advertising and marketing, integrating blockchain 
+                                                    for advanced data-driven strategies and enhanced customer engagement.
+                                                </p>
+                                            </div>
+                                        </>
+                                    )
+                                }
+                                
+                            </div>
+                        )
+                    }
+                </GradientBox>
+            )}
+
+        </>
+    )
+}
+
+const MobileNav = ( { selected, setSelected }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selected, setSelected] = useState(0);
 
   return (
     <>
@@ -181,7 +269,7 @@ const MobileTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
                                 <div className="mr-2 mt-[3px] h-full flex justify-start items-start text-md">{subItem.icon}</div>
                                 <div>
                                     <p className="text-sm">{subItem.name}</p>
-                                    <p className="text-gray-400 text-sm">{subItem.details}</p>
+                                    <p className="text-gray-400 text-sm leading-[18px]">{subItem.details}</p>
                                 </div>
                             </div>
                             {index < submenu.length - 1 && <div className="bg-gradient-to-r from-green-200 to-red-200 h-[1px] my-2"></div>}
