@@ -1,4 +1,5 @@
 import "@styles/globals.css";
+import Nav from "./components/Nav";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <main className='app'>
-          {/* nav bar here */}
+          <Nav />
           {children}
           {/* footer here */}
         </main>
