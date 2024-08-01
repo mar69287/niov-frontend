@@ -6,7 +6,7 @@ const EmailButton = ({ className = '', children }) => {
   return (
     <button 
         className={`btn btn-active rounded-md ${className}`}
-        onClick={() => window.location.href = 'mailto:support@example.com?subject=Request for Demo'}
+        onClick={() => window.location.href = 'mailto:sadeil@niovlabs.com?subject=Request for Demo'}
 
     >
         {children}
