@@ -17,19 +17,19 @@ const navData = [
         name: "Federation Cloud",
         icon: '/assets/images/fedCloudLogo.svg',
         details: "Advertise securely directly.",
-        link: "/products/federation-cloud",
+        link: "/federation-cloud",
       },
       {
         name: "Decentralized Privacy Sandbox",
         icon: '/assets/images/sandIcon.svg',
         details: "Advertise securely directly.",
-        link: "/products/privacy-sandbox",
+        link: "/privacy-sandbox",
       },
       {
         name: "Niov Wallet",
         icon: '/assets/images/walletIcon.svg',
         details: "Smart innovative wallet",
-        link: "/products/niov-wallet",
+        link: "/niov-wallet",
       },
     ],
   },
@@ -133,8 +133,7 @@ const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu, link}
     const gradientStyles = 'bg-gradient-to-t absolute top-[3.85rem] rounded-md p-[2px] hidden md:flex gap-[2px]' 
     return (
         <>
-            <Link 
-                href={link}
+            <div 
                 className="p-2 hidden md:block cursor-pointer hover:text-violet-600 transition-colors duration-200"
                 onMouseEnter={() => {
                     setSelected(isSelected ? 0 : tabNum);
@@ -142,7 +141,7 @@ const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu, link}
             
             >
                 <p className="">{name}</p>
-            </Link>
+            </div>
             {isSelected && (
                 <GradientBox className={gradientStyles}
                 >
@@ -241,13 +240,6 @@ const MobileNav = ( { selected, setSelected }) => {
                 <EmailButton className="bg-black w-full text-white font-light">
                     Request a demo
                 </EmailButton>
-                {/* <button 
-                    className="btn btn-active bg-black w-full rounded-md text-white font-light"
-                    onClick={() => window.location.href = 'mailto:support@example.com?subject=Request for Demo'}
-
-                >
-                    Request a demo
-                </button> */}
             </div>
       )}
     </>
