@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}
         style={{ 
           backgroundImage: "url('/assets/images/desktopParticles.png')", 
-          backgroundSize: 'cover', 
+          backgroundSize: '80%', 
           backgroundPosition: 'center',
           backgroundColor: 'rgba(255, 255, 255, 0.9)' 
         }}
