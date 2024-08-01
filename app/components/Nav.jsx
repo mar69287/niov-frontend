@@ -234,6 +234,7 @@ const MobileNav = ( { selected, setSelected }) => {
                             name={tab.name}
                             icon={tab.icon}
                             submenu={tab.submenu}
+                            setIsMenuOpen={setIsMenuOpen}
                         />
                     ))}
                 </div>
@@ -253,7 +254,7 @@ const MobileNav = ( { selected, setSelected }) => {
   );
 };
 
-const MobileTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
+const MobileTab = ({ setSelected, isSelected, tabNum, name, icon, submenu, setIsMenuOpen}) => {
     const menuTabStyles = 'flex-between py-4 w-full relative text-black'
     const gradientStyles = 'bg-gradient-to-r h-[1px] w-full absolute bottom-0 left-0'
     return (
@@ -283,6 +284,7 @@ const MobileTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
                         <Link key={index} href={subItem.link} className="block py-2 text-black hover:bg-gray-200"
                             onClick={() => {
                                 setSelected(0);
+                                setIsMenuOpen(false);
                             }}
                         >
                             <div className="flex items-start gap-2">
