@@ -92,7 +92,7 @@ const navData = [
 const Nav = () => {
   const [selected, setSelected] = useState(0);
   return (
-    <header className="flex-center relative px-4 md:px-10 z-10 h-[4rem] md:h-[4.5rem] bg-white">
+    <header className="flex-center fixed w-full px-4 md:px-10 z-30 h-[4rem] md:h-[4.5rem] bg-white">
       <nav className='flex-between w-full relative max-w-[90rem]'>
         <Link href='/' className='flex flex-center'>
             <ImageContainer className={"relative w-[100px] h-[50px] md:w-[120px]"} img={'/assets/images/logo.png'} />
@@ -121,7 +121,7 @@ const DesktopNav = ({ selected, setSelected }) => {
                     />
                 ))}
             </div>
-            <button className="btn btn-active bg-black rounded-sm text-white font-light hidden md:block h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+            <button className="btn btn-active bg-black rounded-md text-white font-light hidden md:block h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
         </>
     )
 }
@@ -230,7 +230,7 @@ const MobileNav = ( { selected, setSelected }) => {
                         />
                     ))}
                 </div>
-                <button className="btn btn-active w-full rounded-sm text-white font-light">Request a demo</button>
+                <button className="btn btn-active w-full rounded-md text-white font-light">Request a demo</button>
             </div>
       )}
     </>
