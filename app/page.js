@@ -6,7 +6,7 @@ const heroCardInfo = [
   {
     name: "Federation Cloud",
     icon: '/assets/images/fedCloudLogo.svg',
-    details: "Access high-quality aggregated data, including users`&apos;` staked decentralized identities, to optimize marketing efforts and create more effective, trust-building campaigns.",
+    details: "Access high-quality aggregated data, including users` staked decentralized identities, to optimize marketing efforts and create more effective, trust-building campaigns.",
   },
   {
     name: "NIOV Wallet",
@@ -67,12 +67,12 @@ export default function Home() {
           <div
             className="bg-white rounded-sm p-1 md:px-2"
           >
-            <p className="text-xs md:text-sm">The First Web3 Marketing Platform</p>
+            <p className="text-xs md:text-sm lg:text-base">The First Web3 Marketing Platform</p>
           </div>
         </GradientBox>
-        <h1 className="text-3xl md:text-5xl text-center font-bold leading-8 max-w-md w-full">Delivering the New Internet of Value</h1>
-        <p className="text-center text-xs md:text-base my-2">Next Gen CRM for Web3 Advertising and Marketing</p>
-        <button className="btn btn-active w-max px-4 rounded-[5px] text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+        <h1 className="text-3xl md:text-5xl lg:text-6xl text-center font-bold leading-8 max-w-md md:max-w-xl  w-full">Delivering the New Internet of Value</h1>
+        <p className="text-center text-xs md:text-base lg:text-lg my-2">Next Gen CRM for Web3 Advertising and Marketing</p>
+        <button className="btn btn-active w-max px-4 rounded-[5px] text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-4"
         >
@@ -89,7 +89,7 @@ export default function Home() {
             <div
               className="bg-white rounded-md p-5"
             >
-              <h1 className="text-xl md:text-2xl max-w-sm text-start font-bold leading-6">Intuitive Products Engineered for the Enterprise.</h1>
+              <h1 className="text-xl md:text-2xl lg:text-3xl max-w-sm lg:max-w-md text-start font-bold leading-6">Intuitive Products Engineered for the Enterprise.</h1>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full mt-4">
                 {productCardInfo.map((card, index) => (
                   <ProductCards
@@ -102,11 +102,11 @@ export default function Home() {
             </div>
           </GradientBox>
           <div className={`rounded-md p-5 w-full z-5 md:col-span-2 bg-[#94FFC9] h-52 flex-start flex-col gap-2`}>
-            <h1 className="text-xl lg:text-2xl text-start font-bold leading-6 max-w-sm">Experience the “New Internet of Value” with NIOV Labs</h1>
-            <p className="text-xs lg:text-base m-0 text-gray-600">
+            <h1 className="text-xl md:text-2xl lg:text-3xl text-start font-bold leading-6 max-w-sm lg:max-w-xl">Experience the “New Internet of Value” with NIOV Labs</h1>
+            <p className="text-xs md:text-base lg:text-lg m-0 text-gray-600">
               Transform you marketing strategy with the power of Web3
             </p>
-            <button className="btn btn-active border-none mt-2 w-max px-5 rounded-[5px] text-black font-light bg-white text-xs lg:text-sm h-[2.2rem] lg:h-[2.2rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+            <button className="btn btn-active border-none mt-2 w-max px-5 rounded-[5px] text-black font-light bg-white text-xs md:text-sm lg:text-base h-[2.2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
           </div>
         </div>
       </div>
@@ -120,9 +120,9 @@ const HeroCards = ({ name, icon, details, idx }) => {
       <div
         className={`bg-white rounded-md p-5 flex-start flex-col gap-1 h-[25rem] ${idx == 0 ? 'lg:h-[30rem]' : ''} relative overflow-hidden`}
       >
-        <ImageContainer className={"relative h-[20px] w-[20px] lg:h-[27px] lg:w-[27px]"} img={icon} />
-        <h1 className="text-xl lg:text-2xl text-start font-bold leading-6">{name}</h1>
-        <p className="text-xs lg:text-sm m-0 max-w-lg">
+        <ImageContainer className={"relative h-[20px] w-[20px] md:h-[24px] md:w-[24px] lg:h-[27px] lg:w-[27px]"} img={icon} />
+        <h1 className="text-xl md:text-2xl lg:text-3xl text-start font-bold leading-6">{name}</h1>
+        <p className="text-xs md:text-sm lg:text-base m-0 max-w-lg">
           {details}
         </p>
         <div
@@ -163,8 +163,8 @@ const ProductCards = ({ name, details }) => {
         >
           {/* image here */}
         </div>
-        <h1 className="text-md lg:text-lg text-start font-bold leading-6">{name}</h1>
-        <p className="text-xs lg:text-sm m-0">
+        <h1 className="text-md md:text-lg lg:text-xl text-start font-bold leading-6">{name}</h1>
+        <p className="text-xs md:text-sm lg:text-base m-0">
           {details}
         </p>
       </div>
