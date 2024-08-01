@@ -65,14 +65,14 @@ export default function Home() {
       >
         <GradientBox className="bg-gradient-to-t rounded-sm p-[1px] w-max">
           <div
-            className="bg-white rounded-sm p-1"
+            className="bg-white rounded-sm p-1 md:px-2"
           >
-            <p className="text-xs">The First Web3 Marketing Platform</p>
+            <p className="text-xs md:text-sm">The First Web3 Marketing Platform</p>
           </div>
         </GradientBox>
-        <h1 className="text-3xl text-center font-bold leading-8">Delivering the New Internet of Value</h1>
-        <p className="text-center text-xs my-2">Next Gen CRM for Web3 Advertising and Marketing</p>
-        <button className="btn btn-active w-max px-4 rounded-[5px] text-white font-light bg-black text-xs md:text-sm h-[2rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+        <h1 className="text-3xl md:text-5xl text-center font-bold leading-8 max-w-md w-full">Delivering the New Internet of Value</h1>
+        <p className="text-center text-xs md:text-base my-2">Next Gen CRM for Web3 Advertising and Marketing</p>
+        <button className="btn btn-active w-max px-4 rounded-[5px] text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-4"
         >
@@ -89,8 +89,8 @@ export default function Home() {
             <div
               className="bg-white rounded-md p-5"
             >
-              <h1 className="text-xl text-start font-bold leading-6">Intuitive Products Engineered for the Enterprise.</h1>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full mt-4">
+              <h1 className="text-xl md:text-2xl max-w-sm text-start font-bold leading-6">Intuitive Products Engineered for the Enterprise.</h1>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full mt-4">
                 {productCardInfo.map((card, index) => (
                   <ProductCards
                     key={index}
@@ -102,11 +102,11 @@ export default function Home() {
             </div>
           </GradientBox>
           <div className={`rounded-md p-5 w-full z-5 md:col-span-2 bg-[#94FFC9] h-52 flex-start flex-col gap-2`}>
-            <h1 className="text-xl text-start font-bold leading-6">Experience the “New Internet of Value” with NIOV Labs</h1>
-            <p className="text-xs m-0 text-gray-600">
+            <h1 className="text-xl lg:text-2xl text-start font-bold leading-6 max-w-sm">Experience the “New Internet of Value” with NIOV Labs</h1>
+            <p className="text-xs lg:text-base m-0 text-gray-600">
               Transform you marketing strategy with the power of Web3
             </p>
-            <button className="btn btn-active border-none mt-2 w-max px-5 rounded-[5px] text-black font-light bg-white text-xs md:text-sm h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+            <button className="btn btn-active border-none mt-2 w-max px-5 rounded-[5px] text-black font-light bg-white text-xs lg:text-sm h-[2.2rem] lg:h-[2.2rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
           </div>
         </div>
       </div>
@@ -116,26 +116,36 @@ export default function Home() {
 
 const HeroCards = ({ name, icon, details, idx }) => {
   return (
-    <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] w-full overflow-hidden z-5 ${idx == 0 ? 'md:col-span-2' : 'md:col-span-1'}`}>
+    <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] md:p-[1.4px] w-full overflow-hidden z-5 ${idx == 0 ? 'md:col-span-2 ' : 'md:col-span-1'}`}>
       <div
-        className="bg-white rounded-md p-5 flex-start flex-col gap-1 h-[25rem] relative overflow-hidden"
+        className={`bg-white rounded-md p-5 flex-start flex-col gap-1 h-[25rem] ${idx == 0 ? 'lg:h-[30rem]' : ''} relative overflow-hidden`}
       >
-        <ImageContainer className={"relative h-[20px] w-[20px]"} img={icon} />
-        <h1 className="text-xl text-start font-bold leading-6">{name}</h1>
-        <p className="text-xs m-0">
+        <ImageContainer className={"relative h-[20px] w-[20px] lg:h-[27px] lg:w-[27px]"} img={icon} />
+        <h1 className="text-xl lg:text-2xl text-start font-bold leading-6">{name}</h1>
+        <p className="text-xs lg:text-sm m-0 max-w-lg">
           {details}
         </p>
         <div
           className="w-full flex-1 relative mt-3 sm:mt-5"
         >
-          <GradientBox className="bg-gradient-to-t rounded-md p-[1.2px] absolute top-0 left-0 w-[30rem] min-[500px]:w-full h-[20rem]">
+          <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] absolute top-0 left-0 ${idx == 0 ? 'md:left-[20rem] lg:left-[25rem] xl:left-[33rem]' : ''} w-[30rem] min-[500px]:w-full h-[20rem]`}>
             <div 
               className="bg-white rounded-md w-full h-full"
             >
 
             </div>
           </GradientBox>
+          {
+            idx == 0 && (
+              <GradientBox className={`bg-gradient-to-t hidden md:flex absolute rounded-md p-[1.2px] top-16 left-0 w-[30rem] lg:w-[40rem] h-[20rem]`}>
+                <div 
+                  className="bg-white rounded-md w-full h-full"
+                >
 
+                </div>
+              </GradientBox>
+            )
+          }
         </div>
       </div>
     </GradientBox>
@@ -153,8 +163,8 @@ const ProductCards = ({ name, details }) => {
         >
           {/* image here */}
         </div>
-        <h1 className="text-md text-start font-bold leading-6">{name}</h1>
-        <p className="text-xs m-0">
+        <h1 className="text-md lg:text-lg text-start font-bold leading-6">{name}</h1>
+        <p className="text-xs lg:text-sm m-0">
           {details}
         </p>
       </div>
