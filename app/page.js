@@ -2,6 +2,7 @@ import Image from "next/image";
 import GradientBox from "./components/GradientBox";
 import ImageContainer from "./components/ImageContainer";
 import EmailButton from "./components/buttons/EmailButton";
+import Hero from "./components/Hero";
 
 const heroCardInfo = [
   {
@@ -64,15 +65,14 @@ export default function Home() {
       <div
         className="page-content flex"
       >
-        <GradientBox className="bg-gradient-to-t rounded-sm p-[1px] w-max">
+        <GradientBox className="bg-gradient-to-t rounded-sm p-[1px] w-max mb-1">
           <div
             className="bg-white rounded-sm p-1 md:px-2"
           >
             <p className="text-xs md:text-sm lg:text-base">The First Web3 Marketing Platform</p>
           </div>
         </GradientBox>
-        <h1 className="text-3xl md:text-5xl lg:text-6xl text-center font-bold leading-8 max-w-md md:max-w-xl  w-full">Delivering the New Internet of Value</h1>
-        <p className="text-center text-xs md:text-base lg:text-lg my-2">Next Gen CRM for Web3 Advertising and Marketing</p>
+        <Hero title={`Delivering the New Internet of Value`} details={`Next Gen CRM for Web3 Advertising and Marketing`} />
         <EmailButton className="w-max px-4 text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">
           Request a demo
         </EmailButton>
