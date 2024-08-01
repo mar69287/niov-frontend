@@ -10,6 +10,7 @@ import { LuWalletCards } from "react-icons/lu";
 import { FaBookReader } from "react-icons/fa";
 import { useState } from "react";
 import ImageContainer from "./ImageContainer";
+import EmailButton from "./buttons/EmailButton";
 
 const navData = [
   {
@@ -20,13 +21,13 @@ const navData = [
       {
         name: "Federation Cloud",
         icon: '/assets/images/fedCloudLogo.svg',
-        details: "Advertise securely directly",
+        details: "Advertise securely directly.",
         link: "/products/federation-cloud",
       },
       {
         name: "Decentralized Privacy Sandbox",
         icon: '/assets/images/sandIcon.svg',
-        details: "Advertise securely directly",
+        details: "Advertise securely directly.",
         link: "/products/privacy-sandbox",
       },
       {
@@ -63,7 +64,7 @@ const navData = [
     ],
   },
   {
-    name: "Contact",
+    name: "Company",
     icon: <MdKeyboardArrowDown />,
     link: "/contact",
     submenu: [
@@ -80,9 +81,9 @@ const navData = [
             icon: '/assets/images/careerIcon.svg'
         },
         {
-            name: "Contact Devs",
+            name: "Contact Us",
             link: "/contact",
-            details: "Reach out to the dev team.",
+            details: "Reach out to our team.",
             icon: '/assets/images/contactIcon.svg'
         }
     ],
@@ -126,7 +127,9 @@ const DesktopNav = ({ selected, setSelected }) => {
                     />
                 ))}
             </div>
-            <button className="btn btn-active bg-black rounded-md text-white font-light hidden md:block h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+            <EmailButton className="bg-black text-white font-light hidden md:block h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">
+                Request a demo
+            </EmailButton>
         </>
     )
 }
@@ -239,7 +242,16 @@ const MobileNav = ( { selected, setSelected }) => {
                         />
                     ))}
                 </div>
-                <button className="btn btn-active bg-black w-full rounded-md text-white font-light">Request a demo</button>
+                <EmailButton className="bg-black w-full text-white font-light">
+                    Request a demo
+                </EmailButton>
+                {/* <button 
+                    className="btn btn-active bg-black w-full rounded-md text-white font-light"
+                    onClick={() => window.location.href = 'mailto:support@example.com?subject=Request for Demo'}
+
+                >
+                    Request a demo
+                </button> */}
             </div>
       )}
     </>

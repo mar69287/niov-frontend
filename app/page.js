@@ -1,6 +1,7 @@
 import Image from "next/image";
 import GradientBox from "./components/GradientBox";
 import ImageContainer from "./components/ImageContainer";
+import EmailButton from "./components/buttons/EmailButton";
 
 const heroCardInfo = [
   {
@@ -72,7 +73,9 @@ export default function Home() {
         </GradientBox>
         <h1 className="text-3xl md:text-5xl lg:text-6xl text-center font-bold leading-8 max-w-md md:max-w-xl  w-full">Delivering the New Internet of Value</h1>
         <p className="text-center text-xs md:text-base lg:text-lg my-2">Next Gen CRM for Web3 Advertising and Marketing</p>
-        <button className="btn btn-active w-max px-4 rounded-[5px] text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+        <EmailButton className="w-max px-4 text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">
+          Request a demo
+        </EmailButton>
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-4 md:mt-6 lg:mt-10"
         >
@@ -106,7 +109,9 @@ export default function Home() {
             <p className="text-xs md:text-base lg:text-lg m-0 text-gray-600">
               Transform you marketing strategy with the power of Web3
             </p>
-            <button className="btn btn-active border-none mt-2 w-max px-5 rounded-[5px] text-black font-light bg-white text-xs md:text-sm lg:text-base h-[2.2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
+            <EmailButton className="border-none mt-2 w-max px-5 text-black font-light bg-white text-xs md:text-sm lg:text-base h-[2.2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">
+              Request a demo
+            </EmailButton>
           </div>
         </div>
       </div>

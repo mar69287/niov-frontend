@@ -12,7 +12,7 @@ const navData = [
       link: "/resources",
     },
     {
-      name: "Contact",
+      name: "Company",
       link: "/contact",
     },
   ];
