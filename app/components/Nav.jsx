@@ -19,19 +19,19 @@ const navData = [
     submenu: [
       {
         name: "Federation Cloud",
-        icon: <TbCloudStorm />,
+        icon: '/assets/images/fedCloudLogo.svg',
         details: "Advertise securely directly",
         link: "/products/federation-cloud",
       },
       {
         name: "Decentralized Privacy Sandbox",
-        icon: <TbCloudStorm />,
+        icon: '/assets/images/sandIcon.svg',
         details: "Advertise securely directly",
         link: "/products/privacy-sandbox",
       },
       {
         name: "Niov Wallet",
-        icon: <LuWalletCards />,
+        icon: '/assets/images/walletIcon.svg',
         details: "Smart innovative wallet",
         link: "/products/niov-wallet",
       },
@@ -46,19 +46,19 @@ const navData = [
         name: "Guides",
         link: "/resources/guides",
         details: "Step-by-step instructions for users.",
-        icon: <BsSignTurnRightFill />
+        icon: '/assets/images/guidesIcon.svg'
       },
       {
         name: "Learn",
         link: "/resources/learn",
         details: "Educational content and informative articles.",
-        icon: <FaBookReader />
+        icon: '/assets/images/learnIcon.svg'
       },
       {
         name: "Blog",
         link: "/resources/blog",
         details: "Latest news and updates.",
-        icon: <MdOutlineMenuBook />
+        icon: '/assets/images/blogIcon.svg'
       },
     ],
   },
@@ -71,19 +71,19 @@ const navData = [
             name: "About Us",
             link: "/contact",
             details: "Company history, mission, and values.",
-            icon: <MdPeople />
+            icon: '/assets/images/aboutIcon.svg'
         },
         {
             name: "Careers",
             link: "/contact",
             details: "Job openings and application information.",
-            icon: <TbBriefcase2Filled />
+            icon: '/assets/images/careerIcon.svg'
         },
         {
             name: "Contact Devs",
             link: "/contact",
             details: "Reach out to the dev team.",
-            icon: <MdCall />
+            icon: '/assets/images/contactIcon.svg'
         }
     ],
   },
@@ -237,7 +237,7 @@ const MobileNav = ( { selected, setSelected }) => {
                         />
                     ))}
                 </div>
-                <button className="btn btn-active w-full rounded-md text-white font-light">Request a demo</button>
+                <button className="btn btn-active bg-black w-full rounded-md text-white font-light">Request a demo</button>
             </div>
       )}
     </>
@@ -272,8 +272,8 @@ const MobileTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
                 <div className="w-full">
                     {submenu.map((subItem, index) => (
                         <Link key={index} href={subItem.link} className="block py-2 text-black hover:bg-gray-200">
-                            <div className="flex items-start">
-                                <div className="mr-2 mt-[3px] h-full flex justify-start items-start text-md">{subItem.icon}</div>
+                            <div className="flex items-start gap-2">
+                                <ImageContainer className={"relative h-[19px] w-[19px] mt-[2px]"} img={subItem.icon} />
                                 <div>
                                     <p className="text-sm">{subItem.name}</p>
                                     <p className="text-gray-400 text-sm leading-[18px]">{subItem.details}</p>
