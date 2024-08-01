@@ -29,12 +29,15 @@ const Footer = () => {
                 className="flex-start flex-col sm:flex-row gap-1 sm:gap-4"
             >
                 {navData.map((item, index) => (
-                    <Link 
-                        key={index} href={item.link}
-                        className="text-gray-500 hover:text-gray-800 transition-colors duration-200 p-1 text-sm sm:text-base"
+                    <div key={index}
+                        className="text-gray-500 cursor hover:text-violet-600 transition-colors duration-200 p-1 text-sm sm:text-base"
                     >
-                        {item.name}
-                    </Link>
+                        <Link
+                            href={item.link}
+                        >
+                            {item.name}
+                        </Link>
+                    </div>
                 ))}
             </nav>
         </div>

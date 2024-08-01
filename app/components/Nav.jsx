@@ -82,7 +82,7 @@ const navData = [
         {
             name: "Contact Devs",
             link: "/contact",
-            details: "Reach out to sales team.",
+            details: "Reach out to the dev team.",
             icon: <MdCall />
         }
     ],
@@ -92,7 +92,11 @@ const navData = [
 const Nav = () => {
   const [selected, setSelected] = useState(0);
   return (
-    <header className="flex-center fixed w-full px-4 md:px-10 z-30 h-[4rem] md:h-[4.5rem] bg-white">
+    <header className="flex-center fixed w-full px-4 md:px-10 z-30 h-[4rem] md:h-[4.5rem] bg-white"
+        onMouseLeave={() => {
+            setSelected(0);
+        }}
+    >
       <nav className='flex-between w-full relative max-w-[90rem]'>
         <Link href='/' className='flex flex-center'>
             <ImageContainer className={"relative w-[100px] h-[50px] md:w-[120px]"} img={'/assets/images/logo.png'} />
@@ -118,6 +122,7 @@ const DesktopNav = ({ selected, setSelected }) => {
                         name={tab.name}
                         icon={tab.icon}
                         submenu={tab.submenu}
+                        link={tab.link}
                     />
                 ))}
             </div>
@@ -126,29 +131,31 @@ const DesktopNav = ({ selected, setSelected }) => {
     )
 }
 
-const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
-    const gradientStyles = 'bg-gradient-to-t absolute top-[4rem] rounded-md p-[2px] hidden md:flex gap-[2px]' 
+const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu, link}) => {
+    const gradientStyles = 'bg-gradient-to-t absolute top-[3.85rem] rounded-md p-[2px] hidden md:flex gap-[2px]' 
     return (
         <>
-            <div 
-                className="p-2 hidden md:block"
-                onClick={() => {
+            <Link 
+                href={link}
+                className="p-2 hidden md:block cursor-pointer hover:text-violet-600 transition-colors duration-200"
+                onMouseEnter={() => {
                     setSelected(isSelected ? 0 : tabNum);
                 }}
             
             >
                 <p className="">{name}</p>
-            </div>
+            </Link>
             {isSelected && (
-                <GradientBox className={gradientStyles}>
+                <GradientBox className={gradientStyles}
+                >
                     <div className="w-[18rem] bg-white rounded-tl-md rounded-bl-md p-4">
                         <h1 className="text-gray-400">{name}</h1>
                         {submenu.map((subItem, index) => (
-                            <Link key={index} href={subItem.link} className="block py-2 text-black">
+                            <Link key={index} href={subItem.link} className="block py-2 text-black group">
                                 <div className="flex items-center gap-4">
                                     <div className="h-full flex justify-center items-center text-2xl">{subItem.icon}</div>
                                     <div>
-                                        <p className="text-[15px]">{subItem.name}</p>
+                                        <p className="text-[15px] group-hover:text-violet-600 transition-colors duration-300">{subItem.name}</p>
                                         <p className="text-gray-400 text-[15px] leading-[18px]">{subItem.details}</p>
                                     </div>
                                 </div>
@@ -156,7 +163,7 @@ const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
                         ))}
                         {
                             isSelected && name == "Products" && (
-                                <button className="btn btn-active w-full rounded-sm text-white font-light bg-[#FF7D9C] border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem] mt-3">Download</button>
+                                <button className="btn btn-active w-full rounded-sm text-white font-light bg-[#FF7D9C] hover:bg-[#e06680] transition-colors duration-200 border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem] mt-3">Download</button>
                             )
                         }
                     </div>
