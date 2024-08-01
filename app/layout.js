@@ -9,8 +9,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
-      <body suppressHydrationWarning={true}>
-        <main className='app'>
+      <body suppressHydrationWarning={true}
+        style={{ 
+          backgroundImage: "url('/assets/images/desktopParticles.png')", 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)' 
+        }}
+      >
+        <main 
+          className='app'
+        >
           <Nav />
           {children}
           {/* footer here */}
