@@ -92,7 +92,7 @@ const navData = [
 const Nav = () => {
   const [selected, setSelected] = useState(0);
   return (
-    <header className="flex-center relative px-4 md:px-10 z-10 h-[4rem] md:h-[4.5rem]">
+    <header className="flex-center relative px-4 md:px-10 z-10 h-[4rem] md:h-[4.5rem] bg-white">
       <nav className='flex-between w-full relative max-w-[90rem]'>
         <Link href='/' className='flex flex-center'>
             <ImageContainer className={"relative w-[100px] h-[50px] md:w-[120px]"} img={'/assets/images/logo.png'} />
