@@ -1,13 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import GradientBox from "./GradientBox";
-import { MdMenu, MdKeyboardArrowDown, MdOutlineMenuBook, MdCall, MdPeople, MdContactPhone } from "react-icons/md";
-import { BsSignTurnRightFill } from "react-icons/bs";
-import { TbCloudStorm, TbBriefcase2Filled } from "react-icons/tb";
-import { LuWalletCards } from "react-icons/lu";
-import { FaBookReader } from "react-icons/fa";
+import { MdMenu, MdKeyboardArrowDown } from "react-icons/md";
 import { useState } from "react";
 import ImageContainer from "./ImageContainer";
 import EmailButton from "./buttons/EmailButton";
@@ -285,7 +280,11 @@ const MobileTab = ({setSelected, isSelected, tabNum, name, icon, submenu}) => {
             {isSelected && (
                 <div className="w-full">
                     {submenu.map((subItem, index) => (
-                        <Link key={index} href={subItem.link} className="block py-2 text-black hover:bg-gray-200">
+                        <Link key={index} href={subItem.link} className="block py-2 text-black hover:bg-gray-200"
+                            onClick={() => {
+                                setSelected(0);
+                            }}
+                        >
                             <div className="flex items-start gap-2">
                                 <ImageContainer className={"relative h-[19px] w-[19px] mt-[2px]"} img={subItem.icon} />
                                 <div>
