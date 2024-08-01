@@ -74,7 +74,7 @@ export default function Home() {
         <p className="text-center text-xs md:text-base lg:text-lg my-2">Next Gen CRM for Web3 Advertising and Marketing</p>
         <button className="btn btn-active w-max px-4 rounded-[5px] text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Request a demo</button>
         <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-4 md:mt-6 lg:mt-10"
         >
           {heroCardInfo.map((card, index) => (
             <HeroCards 
@@ -87,10 +87,10 @@ export default function Home() {
           ))}
           <GradientBox className="bg-gradient-to-t rounded-md p-[1px] w-full md:col-span-2">
             <div
-              className="bg-white rounded-md p-5"
+              className="bg-white rounded-md p-5 md:p-7 lg:p-10"
             >
-              <h1 className="text-xl md:text-2xl lg:text-3xl max-w-sm lg:max-w-md text-start font-bold leading-6">Intuitive Products Engineered for the Enterprise.</h1>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full mt-4">
+              <h1 className="text-xl md:text-2xl lg:text-3xl max-w-sm lg:max-w-md text-start font-semibold leading-6">Intuitive Products Engineered for the Enterprise.</h1>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full mt-4 md:mt-6 lg:mt-10">
                 {productCardInfo.map((card, index) => (
                   <ProductCards
                     key={index}
@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
           </GradientBox>
-          <div className={`rounded-md p-5 w-full z-5 md:col-span-2 bg-[#94FFC9] h-52 flex-start flex-col gap-2`}>
+          <div className={`rounded-md p-5 md:p-7 lg:p-10 w-full z-5 md:col-span-2 bg-[#94FFC9] h-52 md:h-56 lg:h-60 flex-start flex-col gap-2`}>
             <h1 className="text-xl md:text-2xl lg:text-3xl text-start font-bold leading-6 max-w-sm lg:max-w-xl">Experience the “New Internet of Value” with NIOV Labs</h1>
             <p className="text-xs md:text-base lg:text-lg m-0 text-gray-600">
               Transform you marketing strategy with the power of Web3
@@ -118,7 +118,7 @@ const HeroCards = ({ name, icon, details, idx }) => {
   return (
     <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] md:p-[1.4px] w-full overflow-hidden z-5 ${idx == 0 ? 'md:col-span-2 ' : 'md:col-span-1'}`}>
       <div
-        className={`bg-white rounded-md p-5 flex-start flex-col gap-1 h-[25rem] ${idx == 0 ? 'lg:h-[30rem]' : ''} relative overflow-hidden`}
+        className={`bg-white rounded-md p-5 md:p-7 lg:p-10 flex-start flex-col gap-1 h-[25rem] ${idx == 0 ? 'lg:h-[30rem]' : ''} relative overflow-hidden`}
       >
         <ImageContainer className={"relative h-[20px] w-[20px] md:h-[24px] md:w-[24px] lg:h-[27px] lg:w-[27px]"} img={icon} />
         <h1 className="text-xl md:text-2xl lg:text-3xl text-start font-bold leading-6">{name}</h1>
@@ -156,7 +156,7 @@ const ProductCards = ({ name, details }) => {
   return (
     <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] w-full overflow-hidden z-5`}>
       <div
-        className="bg-white rounded-md p-5 flex-start flex-col gap-1 h-[17rem] relative overflow-hidden"
+        className="bg-white rounded-md p-5 md:p-6 lg:p-7 flex-start flex-col gap-1 h-[17rem] md:h-[19rem] lg:h-[21rem] relative overflow-hidden"
       >
         <div
           className="w-full flex-1 relative"
