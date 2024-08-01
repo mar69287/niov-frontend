@@ -148,14 +148,16 @@ const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu, link}
             {isSelected && (
                 <GradientBox className={gradientStyles}
                 >
-                    <div className="w-[18rem] bg-white rounded-tl-md rounded-bl-md p-4">
+                    <div className="w-[18rem] xl:w-[20rem] bg-white rounded-tl-md rounded-bl-md p-6">
                         <h1 className="text-gray-400">{name}</h1>
                         {submenu.map((subItem, index) => (
                             <Link key={index} href={subItem.link} className="block py-2 text-black group">
                                 <div className="flex items-center gap-4">
-                                    <div className="h-full flex justify-center items-center text-2xl">{subItem.icon}</div>
+                                    <div className="w-6">
+                                        <ImageContainer className={"relative h-[27px] w-[27px]"} img={subItem.icon} />
+                                    </div>
                                     <div>
-                                        <p className="text-[15px] group-hover:text-violet-600 transition-colors duration-300">{subItem.name}</p>
+                                        <p className="text-[15px] group-hover:text-violet-600 transition-colors duration-300 leading-5">{subItem.name}</p>
                                         <p className="text-gray-400 text-[15px] leading-[18px]">{subItem.details}</p>
                                     </div>
                                 </div>
@@ -170,7 +172,7 @@ const DesktopTab = ({setSelected, isSelected, tabNum, name, icon, submenu, link}
                     {
                         tabNum != 3 && (
                             <div
-                                className={`w-[18rem] bg-white rounded-tr-md rounded-br-md p-4 relative ${tabNum == 1 ? 'h-[22rem]' : 'h-[23rem]'}`}
+                                className={`w-[18rem] xl:w-[20rem] bg-white rounded-tr-md rounded-br-md p-6 relative ${tabNum == 1 ? 'h-[22rem]' : 'h-[23rem]'}`}
                             >
                                 {
                                     tabNum == 1 ?  (
