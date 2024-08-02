@@ -3,14 +3,31 @@ import FinalCard from '@app/components/cards/FinalCard'
 import GradientBox from '@app/components/GradientBox'
 import Hero from '@app/components/Hero'
 import { sandboxData, finalCardInfo } from "@/utils/data";
-
+import Image from 'next/image';
+import css from './privacy-sandbox.module.css'
 
 const PrivacyPage = () => {
   return (
     <section
-        className='main overflow-hidden'
+        className='main overflow-hidden h-[200rem]'
     >
-         <div
+        <div className={`absolute w-[40rem] h-[40rem] -right-96 -top-20 sm:w-[50rem] sm:h-[50rem] sm:-top-28 lg:w-[60rem] lg:h-[60rem] lg:-top-40 ${css.rotateImg1}`}>
+            <Image
+                src="/assets/images/sandboxBackground.png" 
+                fill 
+                alt='logo'
+                className='object-scale-down' 
+            />
+        </div>
+        <div className={`absolute w-[40rem] h-[40rem] -left-80 top-72 sm:w-[50rem] sm:h-[50rem] sm:top-[35rem] lg:w-[50rem] lg:h-[50rem] lg:top-80 2xl:w-[70rem] 2xl:h-[70rem]  ${css.rotateImg2}`}>
+            <Image
+                src="/assets/images/sandboxBackground.png" 
+                fill 
+                alt='logo'
+                className='object-cover' 
+            />
+        </div>
+        <div
             className="page-content flex"
         >
             <Hero title={`Decentralized Privacy Sandbox`} details={`Empowering Advertising with Unmatched Privacy and Control`} />
