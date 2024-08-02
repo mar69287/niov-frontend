@@ -1,8 +1,9 @@
 import DownloadWalletButton from '@app/components/buttons/DownloadWalletButton'
 import Hero from '@app/components/Hero'
-import { walletData, finalCardInfo } from "@/utils/data";
+import { walletData, finalCardInfo, walletImages } from "@/utils/data";
 import FinalCard from '@app/components/cards/FinalCard';
 import GradientBox from '@app/components/GradientBox';
+import css from './niov-wallet.module.css'
 
 const WalletPage = () => {
   return (
@@ -18,6 +19,45 @@ const WalletPage = () => {
             >
                 Download Wallet
             </DownloadWalletButton>
+            <div
+                className='w-full max-w-xl xl:max-w-2xl h-[12rem] min-[500px]:h-[16rem] sm:h-[17rem] md:h-[19rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[22rem] my-10 lg:my-14 relative flex'
+            >
+                <GradientBox
+                    className={`bg-gradient-to-tr rounded-md p-[1.2px] md:p-[1.4px] ${css.w35} overflow-hidden z-5`}
+                >
+                    <div
+                        className={`bg-gray-100 rounded-md p-5 md:p-7 lg:p-10 h-[12rem] min-[500px]:h-[16rem] sm:h-[17rem] md:h-[19rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[22rem] w-full relative overflow-hidden`}
+
+                    >
+
+                    </div>
+                </GradientBox>
+                <GradientBox
+                    className={`bg-gradient-to-tr rounded-md p-[1.2px] md:p-[1.4px] ${css.w35} overflow-hidden z-10 absolute top-4 lg:top-8 left-1/2 transform -translate-x-1/2`}
+                >
+                    <div
+                        className={`bg-gray-100 rounded-md p-5 md:p-7 lg:p-10 h-[12rem] min-[500px]:h-[16rem] sm:h-[17rem] md:h-[19rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[22rem] w-full relative overflow-hidden`}
+
+                    >
+
+                    </div>
+                </GradientBox>
+                <GradientBox
+                    className={`bg-gradient-to-tr rounded-md p-[1.2px] md:p-[1.4px] ${css.w35} overflow-hidden z-3 absolute bottom-4 lg:bottom-8 right-0`}
+                >
+                    <div
+                        className={`bg-gray-100 rounded-md p-5 md:p-7 lg:p-10 h-[12rem] min-[500px]:h-[16rem] sm:h-[17rem] md:h-[19rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[22rem] w-full relative overflow-hidden`}
+
+                    >
+
+                    </div>
+                </GradientBox>
+            </div>
+            <h1
+                className='text-center text-lg md:text-xl lg:text-2xl leading-6 font-medium max-w-sm'
+            >
+                Intuitive products engineered for the Enterprise.
+            </h1>
             <div
                 className="grid grid-cols-1 gap-5 w-full mt-4 md:mt-6 lg:mt-10"
             >
