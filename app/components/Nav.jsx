@@ -7,6 +7,7 @@ import { useState } from "react";
 import ImageContainer from "./ImageContainer";
 import EmailButton from "./buttons/EmailButton";
 import { navData } from "@/utils/data";
+import DownloadWalletButton from "./buttons/DownloadWalletButton";
 
 const Nav = () => {
   const [selected, setSelected] = useState(0);
@@ -216,7 +217,11 @@ const MobileTab = ({ setSelected, isSelected, tabNum, name, icon, submenu, setIs
             )}
             {
                 isSelected && name == "Products" && (
-                    <button className="btn btn-active w-full rounded-sm text-white font-light bg-[#FF7D9C] border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">Download</button>
+                    <DownloadWalletButton
+                        className="w-full text-white font-light bg-[#FF7D9C] border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem] mt-2"
+                    >
+                        Download Wallet
+                    </DownloadWalletButton>
                 )
             }
         </>
