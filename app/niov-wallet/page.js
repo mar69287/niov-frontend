@@ -4,12 +4,29 @@ import { walletData, finalCardInfo, walletImages } from "@/utils/data";
 import FinalCard from '@app/components/cards/FinalCard';
 import GradientBox from '@app/components/GradientBox';
 import css from './niov-wallet.module.css'
+import Image from 'next/image';
 
 const WalletPage = () => {
   return (
     <section
         className='main overflow-hidden'
     >
+         <div className={`absolute w-[30rem] h-[30rem] -right-80 top-80 sm:w-[40rem] sm:h-[40rem] sm:top-[35rem] lg:w-[50rem] lg:h-[50rem] lg:top-[40rem]${css.rotateImg1}`}>
+            <Image
+                src="/assets/images/walletRings.png" 
+                fill 
+                alt='logo'
+                className='object-cover' 
+            />
+        </div>
+        <div className={`absolute w-[30rem] h-[30rem] -left-80 -top-10 sm:w-[40rem] sm:h-[40rem] lg:w-[50rem] lg:h-[50rem] lg:-top-0 ${css.rotateImg2}`}>
+            <Image
+                src="/assets/images/walletRings.png" 
+                fill 
+                alt='logo'
+                className='object-cover' 
+            />
+        </div>
         <div
             className="page-content flex"
         >
