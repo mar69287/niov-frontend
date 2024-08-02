@@ -165,6 +165,29 @@ export const walletData = [
     },
 ]
 
+export const sandboxData = [
+  {
+      subTitle: 'Overview',
+      title: 'Unleash Your Advertising Freedom',
+      details: 'A secure platform that connects you directly with your audience. Using blockchain and privacy-preserving techniques, our solution removes intermediaries, ensuring data privacy and effective targeting.'
+  },
+  {
+      subTitle: '',
+      title: 'Smart Contract-Based Ad Bidding',
+      details: 'Engage in secure, efficient ad transactions with our smart contract-based bidding system, ensuring transparency, reducing costs, and eliminating middlemen, giving you a competitive edge.'
+  },
+  {
+      subTitle: '',
+      title: 'Cross-Platform Data Integration',
+      details: 'Integrate data from multiple sources into one platform to gain a comprehensive view of your audience, enabling more accurate targeting and improved campaign performance.'
+  },
+  {
+      subTitle: '',
+      title: 'Consent Management and Compliance Tools',
+      details: 'Easily manage user consents and comply with global data privacy regulations, building trust with your audience and safeguarding your brand`s reputation.'
+  },
+]
+
 export const finalCardInfo = {
     title: 'Experience the “New Internet of Value” with NIOV Labs',
     details: 'Transform you marketing strategy with the power of Web3',
