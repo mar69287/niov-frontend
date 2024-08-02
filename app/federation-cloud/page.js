@@ -3,12 +3,30 @@ import Hero from "@app/components/Hero"
 import { federationCloudData, finalCardInfo } from "@/utils/data";
 import GradientBox from "@app/components/GradientBox";
 import FinalCard from "@app/components/cards/FinalCard";
+import Image from "next/image";
+import css from './federation-cloud.module.css'
 
 const FederationCloudPage = () => {
   return (
     <seciton
-        className='main overflow-hidden'
+        className='main overflow-hidden '
     >
+        <div className={`absolute w-[30rem] h-[30rem] -right-80 -top-10 sm:w-[40rem] sm:h-[40rem] sm:-top-0 lg:w-[50rem] lg:h-[50rem] lg:-top-0 ${css.rotateImg1}`}>
+            <Image
+                src="/assets/images/federationRings.png" 
+                fill 
+                alt='logo'
+                className='object-cover' 
+            />
+        </div>
+        <div className={`absolute w-[30rem] h-[30rem] -left-80 top-72 sm:w-[40rem] sm:h-[40rem] sm:top-[35rem] lg:w-[50rem] lg:h-[50rem] lg:top-[40rem] ${css.rotateImg2}`}>
+            <Image
+                src="/assets/images/federationRings.png" 
+                fill 
+                alt='logo'
+                className='object-cover' 
+            />
+        </div>
         <div
             className="page-content flex"
         >
