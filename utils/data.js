@@ -9,7 +9,7 @@ export const navData = [
       {
         name: "Federation Cloud",
         icon: '/assets/images/fedCloudLogo.svg',
-        details: "Advertise securely directly.",
+        details: "Optimized personalized data for Web3 marketing.",
         link: "/federation-cloud",
       },
       {
@@ -21,7 +21,7 @@ export const navData = [
       {
         name: "Niov Wallet",
         icon: '/assets/images/walletIcon.svg',
-        details: "Smart innovative wallet",
+        details: "Smart innovative wallet.",
         link: "/niov-wallet",
       },
     ],
