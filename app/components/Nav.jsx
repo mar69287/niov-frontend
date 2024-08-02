@@ -12,7 +12,7 @@ import DownloadWalletButton from "./buttons/DownloadWalletButton";
 const Nav = () => {
   const [selected, setSelected] = useState(0);
   return (
-    <header className="flex-center fixed w-full px-4 md:px-10 z-30 h-[4rem] md:h-[4.5rem] bg-white"
+    <header className="flex-center fixed w-full px-4 md:px-10 z-40 h-[4rem] md:h-[4.5rem] bg-white"
         onMouseLeave={() => {
             setSelected(0);
         }}
@@ -136,7 +136,7 @@ const MobileNav = ( { selected, setSelected }) => {
   return (
     <>
       <div 
-        className="bg-black text-white rounded-sm p-1 px-2 text-xl md:hidden" 
+        className="bg-black text-white rounded-sm p-1 px-2 text-xl md:hidden z-40" 
         onClick={() => {
             setIsMenuOpen(!isMenuOpen)
             setSelected(0)
