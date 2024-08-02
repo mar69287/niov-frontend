@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </GradientBox>
         <Hero title={`Delivering the New Internet of Value`} details={`Next Gen CRM for Web3 Advertising and Marketing`} />
-        <EmailButton className="w-max px-4 text-white font-light bg-black text-xs md:text-sm h-[2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">
+        <EmailButton className="page-button text-white bg-black">
           Request a demo
         </EmailButton>
         <div
