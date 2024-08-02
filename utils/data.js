@@ -146,6 +146,25 @@ export const federationCloudData = [
     },
 ]
 
+export const walletData = [
+    {
+        title: 'Send In-Wallet Messages',
+        details: 'Create personalized messages, ads, and marketing campaigns using our simple yet powerful tools. Reach your audience directly within their wallets, ensuring your message gets seen and acted upon.'
+    },
+    {
+        title: 'Decentralized Identity (DID) Staking',
+        details: 'Decentralized Identity (DID) Staking allows marketers to access verified, user-consented data for precise targeting and engagement, maintaining privacy standards and fostering trust.'
+    },
+    {
+        title: 'User Journey Mapping',
+        details: 'Design user journeys with data from Decentralized Identity (DID) and NIOV Wallet behavior. Craft personalized engagement strategies to enhance user experience and boost conversion rates.'
+    },
+    {
+        title: 'Tokenized Reward System for User Interaction',
+        details: 'Boost engagement and data sharing with token-based rewards. Encourage user participation in campaigns and interactions, providing valuable data insights to enhance targeting accuracy and personalization.'
+    },
+]
+
 export const finalCardInfo = {
     title: 'Experience the “New Internet of Value” with NIOV Labs',
     details: 'Transform you marketing strategy with the power of Web3',
