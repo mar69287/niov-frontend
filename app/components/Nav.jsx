@@ -2,88 +2,11 @@
 
 import Link from "next/link";
 import GradientBox from "./GradientBox";
-import { MdMenu, MdKeyboardArrowDown } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
 import { useState } from "react";
 import ImageContainer from "./ImageContainer";
 import EmailButton from "./buttons/EmailButton";
-
-const navData = [
-  {
-    name: "Products",
-    icon: <MdKeyboardArrowDown />,
-    link: "/products",
-    submenu: [
-      {
-        name: "Federation Cloud",
-        icon: '/assets/images/fedCloudLogo.svg',
-        details: "Advertise securely directly.",
-        link: "/federation-cloud",
-      },
-      {
-        name: "Decentralized Privacy Sandbox",
-        icon: '/assets/images/sandIcon.svg',
-        details: "Advertise securely directly.",
-        link: "/privacy-sandbox",
-      },
-      {
-        name: "Niov Wallet",
-        icon: '/assets/images/walletIcon.svg',
-        details: "Smart innovative wallet",
-        link: "/niov-wallet",
-      },
-    ],
-  },
-  {
-    name: "Resources",
-    icon: <MdKeyboardArrowDown />,
-    link: "/resources",
-    submenu: [
-      {
-        name: "Guides",
-        link: "/resources/guides",
-        details: "Step-by-step instructions for users.",
-        icon: '/assets/images/guidesIcon.svg'
-      },
-      {
-        name: "Learn",
-        link: "/resources/learn",
-        details: "Educational content and informative articles.",
-        icon: '/assets/images/learnIcon.svg'
-      },
-      {
-        name: "Blog",
-        link: "/resources/blog",
-        details: "Latest news and updates.",
-        icon: '/assets/images/blogIcon.svg'
-      },
-    ],
-  },
-  {
-    name: "Company",
-    icon: <MdKeyboardArrowDown />,
-    link: "/contact",
-    submenu: [
-        {
-            name: "About Us",
-            link: "/contact",
-            details: "Company history, mission, and values.",
-            icon: '/assets/images/aboutIcon.svg'
-        },
-        {
-            name: "Careers",
-            link: "/contact",
-            details: "Job openings and application information.",
-            icon: '/assets/images/careerIcon.svg'
-        },
-        {
-            name: "Contact Us",
-            link: "/contact",
-            details: "Reach out to our team.",
-            icon: '/assets/images/contactIcon.svg'
-        }
-    ],
-  },
-];
+import { navData } from "@/utils/data";
 
 const Nav = () => {
   const [selected, setSelected] = useState(0);
