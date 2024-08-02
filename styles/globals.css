@@ -17,6 +17,31 @@ html, body {
   box-sizing: inherit;
 }
 
+.background-image {
+  background-image: url('/assets/images/desktopParticles.png');
+  background-size: 80%;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 768px) {
+  .background-image {
+    background-size: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .background-image {
+    background-size: 40%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .background-image {
+    background-size: 30%;
+  }
+}
+
 .flex-center {
   @apply flex justify-center items-center;
 }
