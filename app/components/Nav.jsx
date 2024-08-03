@@ -197,20 +197,20 @@ const MobileTab = ({ setSelected, isSelected, tabNum, name, icon, submenu, setIs
             {isSelected && (
                 <div className="w-full">
                     {submenu.map((subItem, index) => (
-                        <Link key={index} href={subItem.link} className="block py-2 text-black hover:bg-gray-200"
+                        <Link key={index} href={subItem.link} className="relative text-black"
                             onClick={() => {
                                 setSelected(0);
                                 setIsMenuOpen(false);
                             }}
                         >
-                            <div className="flex items-start gap-2">
+                            <div className={`flex items-start gap-2 relative py-3`}>
                                 <ImageContainer className={"relative h-[19px] w-[19px] mt-[2px]"} img={subItem.icon} />
                                 <div>
                                     <p className="text-sm">{subItem.name}</p>
                                     <p className="text-gray-400 text-sm leading-[18px]">{subItem.details}</p>
                                 </div>
+                            {index < submenu.length - 1 && <GradientBox className={gradientStyles}></GradientBox>}
                             </div>
-                            {index < submenu.length - 1 && <div className="bg-gradient-to-r from-green-200 to-red-200 h-[1px] my-2"></div>}
                         </Link>
                     ))}
                 </div>
@@ -218,7 +218,7 @@ const MobileTab = ({ setSelected, isSelected, tabNum, name, icon, submenu, setIs
             {
                 isSelected && name == "Products" && (
                     <DownloadWalletButton
-                        className="w-full text-white font-light bg-[#FF7D9C] border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem] mt-2"
+                        className="w-full text-white font-light bg-[#FF7D9C] border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]"
                     >
                         Download Wallet
                     </DownloadWalletButton>
