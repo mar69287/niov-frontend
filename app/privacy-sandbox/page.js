@@ -9,7 +9,7 @@ import css from './privacy-sandbox.module.css'
 const PrivacyPage = () => {
   return (
     <section
-        className='main overflow-hidden h-[200rem]'
+        className='main overflow-hidden'
     >
         <div className={`absolute w-[40rem] h-[40rem] -right-96 -top-28 sm:w-[50rem] sm:h-[50rem] sm:-top-28 lg:w-[60rem] lg:h-[60rem] lg:-top-40 ${css.rotateImg1}`}>
             <Image
