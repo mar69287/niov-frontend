@@ -11,7 +11,7 @@ const PrivacyPage = () => {
     <section
         className='main overflow-hidden h-[200rem]'
     >
-        <div className={`absolute w-[40rem] h-[40rem] -right-96 -top-20 sm:w-[50rem] sm:h-[50rem] sm:-top-28 lg:w-[60rem] lg:h-[60rem] lg:-top-40 ${css.rotateImg1}`}>
+        <div className={`absolute w-[40rem] h-[40rem] -right-96 -top-28 sm:w-[50rem] sm:h-[50rem] sm:-top-28 lg:w-[60rem] lg:h-[60rem] lg:-top-40 ${css.rotateImg1}`}>
             <Image
                 src="/assets/images/sandboxBackground.png" 
                 fill 
