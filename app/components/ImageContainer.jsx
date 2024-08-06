@@ -9,6 +9,7 @@ const ImageContainer = ({ className = '', img }) => {
             fill
             sizes="(min-width: 320px) 100%"
             className='object-contain'
+            priority
         />
     </div>
   )
