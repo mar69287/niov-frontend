@@ -188,6 +188,65 @@ export const sandboxData = [
   },
 ]
 
+export const blogData = [
+    {
+      tag: 'Marketing',
+      title: 'Connect your business to the web3 ecosystem',
+      articleImage: '...',
+      author: 'Sadeil Lewis',
+      authTitle: 'Founder, NIOVLabs',
+      authImage: '...'
+    },
+    {
+      tag: 'Marketing',
+      title: 'Connect your business to the web3 ecosystem',
+      articleImage: '...',
+      author: 'Sadeil Lewis',
+      authTitle: 'Founder, NIOVLabs',
+      authImage: '...'
+    },
+    {
+      tag: 'Marketing',
+      title: 'Connect your business to the web3 ecosystem',
+      articleImage: '...',
+      author: 'Sadeil Lewis',
+      authTitle: 'Founder, NIOVLabs',
+      authImage: '...'
+    },
+    {
+      tag: 'Marketing',
+      title: 'Connect your business to the web3 ecosystem',
+      articleImage: '...',
+      author: 'Sadeil Lewis',
+      authTitle: 'Founder, NIOVLabs',
+      authImage: '...'
+    },
+    {
+      tag: 'Marketing',
+      title: 'Connect your business to the web3 ecosystem',
+      articleImage: '...',
+      author: 'Sadeil Lewis',
+      authTitle: 'Founder, NIOVLabs',
+      authImage: '...'
+    },
+    {
+      tag: 'Marketing',
+      title: 'Connect your business to the web3 ecosystem',
+      articleImage: '...',
+      author: 'Sadeil Lewis',
+      authTitle: 'Founder, NIOVLabs',
+      authImage: '...'
+    },
+    {
+      tag: 'Marketing',
+      title: 'Connect your business to the web3 ecosystem',
+      articleImage: '...',
+      author: 'Sadeil Lewis',
+      authTitle: 'Founder, NIOVLabs',
+      authImage: '...'
+    },
+]
+
 export const finalCardInfo = {
     title: 'Experience the “New Internet of Value” with NIOV Labs',
     details: 'Transform you marketing strategy with the power of Web3',
