@@ -59,7 +59,7 @@ const BlogPage = () => {
             </nav>
             <GradientBox className="bg-gradient-to-r h-[1px] w-full absolute bottom-0 left-0" />
         </header>
-        <div
+        {/* <div
             className="w-full relative z-10 max-w-[90rem] mt-[7.75rem] md:mt-[8.5rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
             {blogData.map((article, index) => (
@@ -74,6 +74,13 @@ const BlogPage = () => {
                 index={index}
             />
             ))}
+        </div> */}
+
+        <div className='flex-center items-center h-[calc(100vh-19.5rem)] sm:h-[calc(100vh-16rem)] md:h-[calc(100vh-16.5rem)] w-full mt-[7.75rem] md:mt-[8.5rem]'>
+            <div className='text-center'>
+              <h2 className='text-4xl md:text-5xl font-bold text-gray-700 mb-4'>No Blogs Yet</h2>
+              <p className='text-base md:text-lg text-gray-500'>Stay tuned! We will be adding new content soon.</p>
+            </div>
         </div>
     </section>
   )
