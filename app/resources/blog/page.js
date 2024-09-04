@@ -47,7 +47,7 @@ const BlogPage = () => {
                         ))}
                     </div>
                     <GradientBox
-                        className="bg-gradient-to-tr p-[1.2px] w-max rounded-md"
+                        className="bg-gradient-to-tr p-[1.2px] w-max rounded-md relative z-10"
                     >
                         <SearchInput
                             searchTerm={searchTerm}
