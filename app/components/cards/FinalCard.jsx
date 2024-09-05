@@ -8,7 +8,7 @@ const FinalCard = ({ title, details }) => {
             {details}
         </p>
         <EmailButton className="border-none mt-2 w-max px-5 text-black font-light bg-white text-xs md:text-sm lg:text-base h-[2.2rem] md:h-[2.2rem] lg:h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">
-            Request a demo
+            Meet the Founders
         </EmailButton>
     </div>
   )

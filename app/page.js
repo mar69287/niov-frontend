@@ -31,7 +31,7 @@ export default function Home() {
         </GradientBox>
         <Hero title={`Delivering the New Internet of Value`} details={`Next Gen CRM for Web3 Advertising and Marketing`} />
         <EmailButton className="page-button text-white bg-black">
-          Request a demo
+          Meet the Founders
         </EmailButton>
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-4 md:mt-6 lg:mt-10"

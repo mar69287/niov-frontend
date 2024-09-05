@@ -32,7 +32,7 @@ const PrivacyPage = () => {
         >
             <Hero title={`Decentralized Privacy Sandbox`} details={`Empowering Advertising with Unmatched Privacy and Control`} />
             <EmailButton className="page-button text-white bg-black">
-                Request a demo
+                Meet the Founders
             </EmailButton>
             <div
                 className="grid grid-cols-1 gap-5 w-full mt-4 md:mt-6 lg:mt-10"

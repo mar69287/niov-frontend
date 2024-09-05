@@ -32,7 +32,7 @@ const FederationCloudPage = () => {
         >
             <Hero title={`Federation Cloud`} details={`Trailblazing the Future of Marketing`} />
             <EmailButton className="page-button text-white bg-black">
-                Request a demo
+                Meet the Founders
             </EmailButton>
             <div
                 className="grid grid-cols-1 gap-5 w-full mt-4 md:mt-6 lg:mt-10"

@@ -47,7 +47,7 @@ const DesktopNav = ({ selected, setSelected }) => {
                 ))}
             </div>
             <EmailButton className="bg-black text-white font-light hidden md:block h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]">
-                Request a demo
+                Meet the Founders
             </EmailButton>
         </>
     )
@@ -162,7 +162,7 @@ const MobileNav = ( { selected, setSelected }) => {
                     ))}
                 </div>
                 <EmailButton className="bg-black w-full text-white font-light">
-                    Request a demo
+                    Meet the Founders
                 </EmailButton>
             </div>
       )}
