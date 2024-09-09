@@ -83,16 +83,20 @@ export const homeCardInfo = [
       name: "Federation Cloud",
       icon: '/assets/images/fedCloudLogo.svg',
       details: "Access high-quality aggregated data, including users` staked decentralized identities, to optimize marketing efforts and create more effective, trust-building campaigns.",
+      image1: '/assets/images/fedCloud1.png',
+      image2: '/assets/images/fedCloud2.png'
     },
     {
       name: "NIOV Wallet",
       icon: '/assets/images/walletIcon.svg',
       details: "Manage your userbase and send personalized in-wallet messages, marketing campaigns and ads to your users, while empowering them to stake their data for rewards.",
+      image1: '/assets/images/niovWallet.svg'
     },
     {
       name: "Decentralized Privacy Sandbox",
       icon: '/assets/images/sandIcon.svg',
       details: "Advertise directly with your audiences securely and transparently, eliminating the middleman and ensuring complete user privacy and data control.",
+      image1: '/assets/images/privacySandbox.svg'
     },
 ]
 
@@ -100,26 +104,32 @@ export const homeProductCardInfo = [
     {
       name: "User Analytics Dashboard",
       details: "Track and analyze user engagement with detailed metrics and insights. Optimize your campaigns for maximum impact.",
+      image: '/assets/images/analytics.png'
     },
     {
       name: "Personalized Messaging",
       details: "Send customized in-wallet messages tailored to your users' preferences and behavior. Increase engagement and conversion rates.",
+      image: '/assets/images/messages.png'
     },
     {
       name: "Multi-Channel Campaigns",
       details: "Design and execute marketing campaigns across various blockchain networks, including cross-platform campaigns. Reach your audience wherever they are.",
+      image: '/assets/images/campaigns.png'
     },
     {
       name: "Real-Time Reporting",
       details: "Access real-time data and reports to monitor your campaign performance. Make informed decisions with up-to-date information.",
+      image: '/assets/images/reporting.png'
     },
     {
       name: "Real-Time User Engagement Notifications",
       details: "Get real-time notifications from Federation Cloud and Privacy Sandbox about user actions in the NIOV Wallet for quick follow-ups.",
+      image: '/assets/images/notifications.png'
     },
     {
       name: "Secure Data Management",
       details: "Secure user data with encryption and IPFS for storage. Protect privacy, build trust, and ensure compliance.",
+      image: '/assets/images/encrypted.png'
     }
 ]
 

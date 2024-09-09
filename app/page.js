@@ -43,6 +43,8 @@ export default function Home() {
               icon={card.icon}
               details={card.details}
               idx={index}
+              image1={card.image1}
+              image2={card.image2}
             />
           ))}
           <GradientBox className="bg-gradient-to-t rounded-md p-[1px] w-full md:col-span-2">
@@ -56,6 +58,7 @@ export default function Home() {
                     key={index}
                     name={card.name}
                     details={card.details}
+                    image={card.image}
                   />
                 ))}
               </div>
@@ -68,11 +71,11 @@ export default function Home() {
   );
 }
 
-const HeroCards = ({ name, icon, details, idx }) => {
+const HeroCards = ({ name, icon, details, idx, image1, image2 }) => {
   return (
     <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] md:p-[1.4px] w-full overflow-hidden z-5 ${idx == 0 ? 'md:col-span-2 ' : 'md:col-span-1'}`}>
       <div
-        className={`bg-white rounded-md p-5 md:p-7 lg:p-10 flex-start flex-col gap-1 h-[25rem] ${idx == 0 ? 'lg:h-[30rem]' : ''} relative overflow-hidden`}
+        className={`bg-white rounded-md p-5 md:p-7 lg:p-10 flex-start flex-col gap-1 h-[25rem] ${idx == 0 ? 'lg:h-[42rem]' : 'lg:h-[28rem]'} relative overflow-hidden`}
       >
         <ImageContainer className={"relative h-[20px] w-[20px] md:h-[24px] md:w-[24px] lg:h-[27px] lg:w-[27px]"} img={icon} />
         <h1 className="text-xl md:text-2xl lg:text-3xl text-start font-bold leading-6">{name}</h1>
@@ -82,20 +85,47 @@ const HeroCards = ({ name, icon, details, idx }) => {
         <div
           className="w-full flex-1 relative mt-3 sm:mt-5"
         >
-          <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] absolute top-0 left-0 ${idx == 0 ? 'md:left-[20rem] lg:left-[25rem] xl:left-[33rem]' : ''} w-[30rem] min-[500px]:w-full h-[20rem]`}>
-            <div 
-              className="bg-white rounded-md w-full h-full"
-            >
+          {
+            idx == 0 ? (
+              <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] absolute top-0 left-0 ${idx == 0 ? 'md:left-[20rem] lg:left-[30rem] xl:left-[38rem] lg:w-[50rem] lg:h-[25rem]' : ''} w-[30rem] min-[500px]:w-full h-[30rem]`}>
+                <div 
+                  className="bg-white rounded-md w-full h-full overflow-hidden p-2"
+                >
+                  <Image
+                    src={image1}
+                    width={500}
+                    height={500}
+                    alt='logo'
+                    layout='responsive'
+                    className='rounded-md' 
+                  />
+                </div>
+              </GradientBox>
+            ) : (
+              <GradientBox className={`bg-gradient-to-t overflow-hidden rounded-md p-[1.2px] min-[500px]:w-full h-full`}>
+                <div 
+                  className="bg-white rounded-md w-full h-full p-2 overflow-hidden relative "
+                >
+                  <ImageContainer className={"w-[30rem] h-[50rem] absolute left-0 right-0 top-0 bottom-0 m-auto"} img={image1} />
+                </div>
+              </GradientBox>
+            )
+          }
 
-            </div>
-          </GradientBox>
           {
             idx == 0 && (
-              <GradientBox className={`bg-gradient-to-t hidden md:flex absolute rounded-md p-[1.2px] top-16 left-0 w-[30rem] lg:w-[40rem] h-[20rem]`}>
-                <div 
-                  className="bg-white rounded-md w-full h-full"
+              <GradientBox className={`bg-gradient-to-t hidden md:flex absolute rounded-md p-[1.2px] top-16 left-0 w-[30rem] lg:w-[50rem] h-[20rem] lg:h-[30rem]`}>
+               <div 
+                  className="bg-white rounded-md w-full h-full overflow-hidden p-2"
                 >
-
+                  <Image
+                    src={image2}
+                    width={500}
+                    height={500}
+                    alt='logo'
+                    layout='responsive'
+                    className='rounded-md' 
+                  />
                 </div>
               </GradientBox>
             )
@@ -106,16 +136,16 @@ const HeroCards = ({ name, icon, details, idx }) => {
   )
 }
 
-const ProductCards = ({ name, details }) => {
+const ProductCards = ({ name, details, image }) => {
   return (
     <GradientBox className={`bg-gradient-to-t rounded-md p-[1.2px] w-full overflow-hidden z-5`}>
       <div
-        className="bg-white rounded-md p-5 md:p-6 lg:p-7 flex-start flex-col gap-1 h-[17rem] md:h-[19rem] lg:h-[21rem] relative overflow-hidden"
+        className="bg-white rounded-md p-5 md:p-6 lg:p-7 flex-start flex-col gap-1 h-[13rem] md:h-[14rem] lg:h-[18rem] relative overflow-hidden"
       >
         <div
           className="w-full flex-1 relative"
         >
-          {/* image here */}
+          <ImageContainer className={"relative h-[20px] w-[20px] md:h-[24px] md:w-[24px] lg:h-[27px] lg:w-[27px]"} img={image} />
         </div>
         <h1 className="text-md md:text-lg lg:text-xl text-start font-bold leading-6">{name}</h1>
         <p className="text-xs md:text-sm lg:text-base m-0">
