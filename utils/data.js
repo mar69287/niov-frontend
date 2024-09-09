@@ -142,17 +142,20 @@ export const federationCloudData = [
     {
         subTitle: '',
         title: 'Manage In-wallet Messages',
-        details: 'Create personalized messages and marketing campaigns with our intuitive tools. Include tailored links that allow users to purchase assets using any currency on any blockchain, ensuring your messages are actionable and effective.'
+        details: 'Create personalized messages and marketing campaigns with our intuitive tools. Include tailored links that allow users to purchase assets using any currency on any blockchain, ensuring your messages are actionable and effective.',
+        image1: '/assets/images/inWalletMessages.svg',
     },
     {
         subTitle: '',
         title: 'Advanced Data Attribution',
-        details: 'Ensure precise tracking and measurement of your marketing efforts. Our advanced data attribution tools provide transparent and verifiable insights, helping you understand the true impact of your campaigns.'
+        details: 'Ensure precise tracking and measurement of your marketing efforts. Our advanced data attribution tools provide transparent and verifiable insights, helping you understand the true impact of your campaigns.',
+        image1: '/assets/images/dataAttribution.svg',
     },
     {
         subTitle: '',
         title: 'Enhanced User Engagement',
-        details: 'Build captivating user experiences with personalized marketing campaigns. Reward your loyal customers and foster a dynamic connection that drives long-term engagement and brand loyalty.'
+        details: 'Build captivating user experiences with personalized marketing campaigns. Reward your loyal customers and foster a dynamic connection that drives long-term engagement and brand loyalty.',
+        image1: '/assets/images/userEngagement.svg',
     },
 ]
 

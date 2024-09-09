@@ -43,6 +43,8 @@ const FederationCloudPage = () => {
                         title={item.title}
                         subTitle={item.subTitle}
                         details={item.details}
+                        idx={index}
+                        image={item.image1}
                     />
                 ))}
                 <FinalCard title={finalCardInfo.title} details={finalCardInfo.details} />
@@ -52,13 +54,13 @@ const FederationCloudPage = () => {
   )
 }
 
-const Cards = ({ subTitle, title, details }) => {
+const Cards = ({ subTitle, title, details, idx, image }) => {
     return (
         <GradientBox
             className={`bg-gradient-to-tr rounded-md p-[1.2px] md:p-[1.4px] w-full overflow-hidden z-5 md:col-span-2`}
         >
             <div
-                className={`bg-white rounded-md p-5 md:p-7 lg:p-10 flex-start flex-col lg:flex-row lg:gap-5 gap-1 h-[22rem] md:h-[25rem] relative overflow-hidden`}
+                className={`bg-white rounded-md p-5 md:p-7 lg:p-10 flex-start flex-col lg:flex-row lg:gap-5 gap-1 ${idx == 0 ? '' : ' h-[22rem] md:h-[25rem]'} relative overflow-hidden`}
             >
                 <div className="flex-start flex-col gap-1 lg:flex-1">
                     {
@@ -73,17 +75,27 @@ const Cards = ({ subTitle, title, details }) => {
                         {details}
                     </p>
                 </div>
-                <div 
-                    className="w-full flex-1 relative mt-3 sm:mt-5"
-                >
-                    <GradientBox className={`bg-gradient-to-tr rounded-md p-[1.1px] absolute top-0 left-0 right-0 lg:w-[45rem] min-[500px]:w-full h-[20rem] lg:h-[25rem]`}>
+                {
+                    idx > 0 && (
                         <div 
-                            className="bg-white rounded-md w-full h-full"
+                            className={`w-full flex-1 relative mt-3 sm:mt-5`}
                         >
-
+                            <GradientBox className={`bg-gradient-to-tr rounded-md p-[1.1px] absolute top-0 left-0 right-0 lg:w-[45rem] min-[500px]:w-full h-[20rem] lg:h-[25rem]`}>
+                                <div 
+                                    className="bg-white rounded-md w-full h-full"
+                                >
+                                    <Image
+                                        src={image}
+                                        width={500}
+                                        height={500}
+                                        alt='logo'
+                                        layout='responsive'
+                                        className='rounded-md' 
+                                    />
+                                </div>
+                            </GradientBox>
                         </div>
-                    </GradientBox>
-                </div>
+                )} 
             </div>
         </GradientBox>
     )
