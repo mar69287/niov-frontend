@@ -5,6 +5,7 @@ import EmailButton from "./components/buttons/EmailButton";
 import Hero from "./components/Hero";
 import { homeCardInfo, homeProductCardInfo, finalCardInfo } from "@/utils/data";
 import FinalCard from "./components/cards/FinalCard";
+import HeroHook from "./components/HeroHook";
 
 export default function Home() {
   return (
@@ -22,13 +23,7 @@ export default function Home() {
       <div
         className="page-content flex"
       >
-        <GradientBox className="bg-gradient-to-t rounded-sm p-[1px] w-max mb-1">
-          <div
-            className="bg-white rounded-sm p-1 md:px-2"
-          >
-            <p className="text-xs md:text-sm lg:text-base">The First Web3 Marketing Platform</p>
-          </div>
-        </GradientBox>
+        <HeroHook />
         <Hero title={`Delivering the New Internet of Value`} details={`Next Gen CRM for Web3 Advertising and Marketing`} />
         <EmailButton className="page-button text-white bg-black">
           Meet the Founders
