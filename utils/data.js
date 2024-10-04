@@ -89,7 +89,8 @@ export const homeCardInfo = [
     {
       name: "NIOV Passport",
       icon: '/assets/images/walletIcon.svg',
-      details: "Manage your userbase and send personalized in-wallet messages, marketing campaigns and ads to your users, while empowering them to stake their data for rewards.",
+      // details: "Manage your userbase and send personalized in-wallet messages, marketing campaigns and ads to your users, while empowering them to stake their data for rewards.",
+      details: "The gateway for users to access, manage, and control their personal data across all platforms and applications fully integrated with the DPS to Facilitate seamless interaction between users.",
       image1: '/assets/images/niovWallet.svg'
     },
     {
