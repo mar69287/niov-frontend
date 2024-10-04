@@ -220,7 +220,7 @@ const MobileTab = ({ setSelected, isSelected, tabNum, name, icon, submenu, setIs
                     <DownloadWalletButton
                         className="w-full text-white font-light bg-[#FF7D9C] border-none h-[2.5rem] min-h-[1.5rem] max-h-[2.5rem]"
                     >
-                        Download Wallet
+                        Download Passport
                     </DownloadWalletButton>
                 )
             }

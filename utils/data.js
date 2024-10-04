@@ -19,10 +19,10 @@ export const navData = [
         link: "/privacy-sandbox",
       },
       {
-        name: "Niov Wallet",
+        name: "NIOV Passport",
         icon: '/assets/images/walletIcon.svg',
-        details: "Smart innovative wallet.",
-        link: "/niov-wallet",
+        details: "Smart innovative passport.",
+        link: "/niov-passport",
       },
     ],
   },
@@ -87,7 +87,7 @@ export const homeCardInfo = [
       image2: '/assets/images/fedCloud2.png'
     },
     {
-      name: "NIOV Wallet",
+      name: "NIOV Passport",
       icon: '/assets/images/walletIcon.svg',
       details: "Manage your userbase and send personalized in-wallet messages, marketing campaigns and ads to your users, while empowering them to stake their data for rewards.",
       image1: '/assets/images/niovWallet.svg'

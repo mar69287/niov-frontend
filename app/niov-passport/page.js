@@ -30,11 +30,11 @@ const WalletPage = () => {
         <div
             className="page-content flex"
         >
-            <Hero title={`NIOV Wallet`} details={`Manage your userbase and send personalized in-wallet messages, campaigns and ads to your users.`} />
+            <Hero title={`NIOV Passport`} details={`Manage your userbase and send personalized in-wallet messages, campaigns and ads to your users.`} />
             <DownloadWalletButton
                 className="page-button bg-[#FF7D9C] text-white"
             >
-                Download Wallet
+                Download Passport
             </DownloadWalletButton>
             <div
                 className='w-full max-w-xl xl:max-w-2xl h-[12rem] min-[500px]:h-[16rem] sm:h-[17rem] md:h-[19rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[22rem] my-10 lg:my-14 relative flex'
