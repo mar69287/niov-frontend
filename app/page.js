@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import { homeCardInfo, homeProductCardInfo, finalCardInfo } from "@/utils/data";
 import FinalCard from "./components/cards/FinalCard";
 import HeroHook from "./components/HeroHook";
+import WaitlistForm from "./components/WaitlistForm";
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
               </div>
             </div>
           </GradientBox>
+          <WaitlistForm />
           <FinalCard title={finalCardInfo.title} details={finalCardInfo.details} />
         </div>
       </div>
