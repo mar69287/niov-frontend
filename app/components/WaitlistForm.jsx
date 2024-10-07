@@ -52,7 +52,7 @@ const WaitlistForm = () => {
   };
 
   return (
-    <GradientBox className="bg-gradient-to-t rounded-md p-[1px] w-full md:col-span-2">
+    <GradientBox className="bg-gradient-to-t rounded-md p-[1px] w-full ">
       <div className="rounded-md p-5 md:p-7 lg:p-10 w-full z-5 bg-white h-auto flex justify-center items-center flex-col gap-4">
         <h1 className="text-xl md:text-2xl lg:text-3xl text-start font-bold leading-6 max-w-sm lg:max-w-xl">Join the Waitlist</h1>
         <form onSubmit={handleSubmit} className="w-full max-w-lg flex flex-col gap-4">

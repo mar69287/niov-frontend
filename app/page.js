@@ -1,14 +1,30 @@
+'use client';
 import Image from "next/image";
 import GradientBox from "./components/GradientBox";
 import ImageContainer from "./components/ImageContainer";
-import EmailButton from "./components/buttons/EmailButton";
 import Hero from "./components/Hero";
 import { homeCardInfo, homeProductCardInfo, finalCardInfo } from "@/utils/data";
 import FinalCard from "./components/cards/FinalCard";
 import HeroHook from "./components/HeroHook";
 import WaitlistForm from "./components/WaitlistForm";
+import WaitlistButton from "./components/buttons/WaitlistButton";
+import { useRef } from 'react';
 
 export default function Home() {
+  const waitlistRef = useRef(null);
+
+  const scrollToWaitlist = () => {
+    if (waitlistRef.current) {
+      const yOffset = -70; // Adjust this offset as needed (e.g., to compensate for any sticky headers)
+      const yPosition = waitlistRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+      window.scrollTo({
+        top: yPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <section 
       className='main overflow-hidden'
@@ -26,9 +42,9 @@ export default function Home() {
       >
         <HeroHook />
         <Hero title={`Delivering the New Internet of Value`} details={`Next Gen CRM for Web3 Advertising and Marketing`} />
-        <EmailButton className="page-button text-white bg-black">
-          Meet the Founders
-        </EmailButton>
+        <WaitlistButton className="page-button text-white bg-black" onClick={scrollToWaitlist}>
+          Join the Waitlist
+        </WaitlistButton>
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full mt-4 md:mt-6 lg:mt-10"
         >
@@ -60,7 +76,9 @@ export default function Home() {
               </div>
             </div>
           </GradientBox>
-          <WaitlistForm />
+          <div ref={waitlistRef} className='w-full md:col-span-2'>
+            <WaitlistForm />
+          </div>
           <FinalCard title={finalCardInfo.title} details={finalCardInfo.details} />
         </div>
       </div>
