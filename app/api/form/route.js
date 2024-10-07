@@ -6,17 +6,19 @@ import User from '@lib/models/user'
 
 export const POST = async request => {
   try {
-    const { email, username } = await request.json()
+    const { email, fullName } = await request.json()
+    console.log({email})
+    console.log({fullName})
 
-    if (!email || !username) {
+    if (!email || !fullName) {
       return NextResponse.json(
-        { error: 'Both name and username are required' },
+        { error: 'Both name and fullName are required' },
         { status: 400 }
       )
     }
 
     await connect()
-    const newUser = new User({ email, username })
+    const newUser = new User({ email, fullName })
     await newUser.save()
 
     return NextResponse.json(

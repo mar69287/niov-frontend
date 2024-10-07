@@ -26,7 +26,7 @@ const WaitlistForm = () => {
 
     try {
       // Send POST request to the API route
-      const response = await fetch('/api/waitlist', {
+      const response = await fetch('/api/form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
