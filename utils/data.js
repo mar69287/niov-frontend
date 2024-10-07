@@ -83,8 +83,8 @@ export const homeCardInfo = [
       name: "Federation Cloud",
       icon: '/assets/images/fedCloudLogo.svg',
       details: "Access high-quality aggregated data, including users` staked decentralized identities, to optimize marketing efforts and create more effective, trust-building campaigns.",
-      image1: '/assets/images/fedCloud1.png',
-      image2: '/assets/images/fedCloud2.png'
+      image1: '/assets/images/fedCloud1.svg',
+      image2: '/assets/images/fedCloud2.svg'
     },
     {
       name: "NIOV Passport",
