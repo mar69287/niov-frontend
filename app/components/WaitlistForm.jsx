@@ -25,6 +25,7 @@ const WaitlistForm = () => {
     setStatus(null); 
 
     try {
+      // Send POST request to the API route
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: {
@@ -38,9 +39,10 @@ const WaitlistForm = () => {
         console.log(result.message);
 
         setButtonText('Submitted');
+        setFormData({ fullName: '', email: '' });
         setTimeout(() => {
           setButtonText('Join Now');
-        }, 3000);
+        }, 4000);
       } else {
         console.error('Failed to submit waitlist');
         setStatus('Failed to submit waitlist. Please try again.');
@@ -82,7 +84,6 @@ const WaitlistForm = () => {
               required
             />
           </div>
-
 
           {status && (
             <p className="text-red-500 text-sm md:text-base lg:text-lg mb-2">{status}</p>
