@@ -10,6 +10,7 @@ const WaitlistForm = () => {
 
   const [status, setStatus] = useState(null);
   const [buttonText, setButtonText] = useState('Join Now');
+  const [isLoading, setIsLoading] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,10 +23,11 @@ const WaitlistForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form Data:', formData);
-    setStatus(null); 
+    setStatus(null);
+    setIsLoading(true); 
 
     try {
-      // Send POST request to the API route
+
       const response = await fetch('/api/form', {
         method: 'POST',
         headers: {
@@ -40,16 +42,19 @@ const WaitlistForm = () => {
 
         setButtonText('Submitted');
         setFormData({ fullName: '', email: '' });
+        setIsLoading(false);
         setTimeout(() => {
           setButtonText('Join Now');
         }, 4000);
       } else {
         console.error('Failed to submit waitlist');
         setStatus('Failed to submit waitlist. Please try again.');
+        setIsLoading(false);
       }
     } catch (error) {
       console.error('An error occurred:', error);
       setStatus('An error occurred. Please try again.');
+      setIsLoading(false);
     }
   };
 
@@ -91,9 +96,17 @@ const WaitlistForm = () => {
 
           <button
             type="submit"
-            className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-all duration-200 mt-4"
+            className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-all duration-200 mt-4 flex items-center justify-center gap-2"
+            disabled={isLoading} 
           >
-            {buttonText}
+            {isLoading ? (
+              <>
+                <span className="loading loading-spinner loading-xs"></span>
+                Loading...
+              </>
+            ) : (
+              buttonText
+            )}
           </button>
         </form>
       </div>
