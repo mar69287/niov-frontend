@@ -3,27 +3,28 @@ import GradientBox from "./GradientBox"
 import ImageContainer from "./ImageContainer"
 
 const navData = [
-    {
-      name: "Products",
-      link: "/products",
-    },
-    {
-      name: "Resources",
-      link: "/resources",
-    },
-    {
-      name: "Company",
-      link: "/contact",
-    },
+    // {
+    //   name: "Products",
+    //   link: "/products",
+    // },
+    // {
+    //   name: "Resources",
+    //   link: "/resources",
+    // },
+    // {
+    //   name: "Company",
+    //   link: "/contact",
+    // },
   ];
 
 const Footer = () => {
   return (
     <footer className="flex-center relative w-full px-4 md:px-10 z-30 bg-white py-4">
         <div className="flex justify-between items-start sm:items-center w-full max-w-[90rem]">
-            <aside className="flex-start sm:justify-center sm:items-center flex-col sm:flex-row gap-0 sm:gap-2">
+            <aside className="flex-start sm:justify-center sm:items-center flex-col sm:flex-row gap-0 sm:gap-2 lg:gap-3">
                 <ImageContainer className={"relative w-[100px] h-[20px] md:w-[120px]"} img={'/assets/images/logo.png'} />
-                <p className="text-gray-500">| 2024 NIOVLABS, INC</p>
+                <p className="text-gray-500">| </p>
+                <p className="text-gray-500">2024 NIOVLABS, INC</p>
             </aside>
             <nav 
                 className="flex-start flex-col sm:flex-row gap-1 sm:gap-4"
